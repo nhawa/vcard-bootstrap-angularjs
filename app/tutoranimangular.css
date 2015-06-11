@@ -1,0 +1,271 @@
+/**
+* start animation
+**/
+
+/*ngShow animation*/
+.firstSampleAnimation.ng-hide-add,
+.firstSampleAnimation.ng-hide-remove {
+    -webkit-transition: 1s ease-in-out opacity;
+    transition: 1s ease-in-out opacity;
+    opacity: 1;
+}
+.firstSampleAnimation.ng-hide {
+    opacity: 0;
+}
+
+/* ngIf animation */
+.animationIf.ng-enter,
+.animationIf.ng-leave {
+    -webkit-transition: opacity ease-in-out 1s;
+    transition: opacity ease-in-out 1s;
+}
+.animationIf.ng-enter,
+.animationIf.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+.animationIf.ng-leave,
+.animationIf.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+/* ngRepeat ng-enter animation */
+.repeatItem.ng-enter {
+    -webkit-animation: 1s ng-enter-repeat-animation;
+    animation: 1s ng-enter-repeat-animation;
+}
+@-webkit-keyframes ng-enter-repeat-animation {
+    from {
+        opacity: 0;
+        color: red;
+    }
+    to {
+        opacity: 1;
+        color: black;
+    }
+}
+@keyframes ng-enter-repeat-animation {
+    from {
+        opacity: 0;
+        color: red;
+    }
+    to {
+        opacity: 1;
+        color: black;
+    }
+}
+
+/* ngRepeat ng-move animation */
+.repeatItem.ng-move {
+    -webkit-animation: 1s ng-move-repeat-animation;
+    animation: 1s ng-move-repeat-animation;
+}
+@-webkit-keyframes ng-move-repeat-animation {
+    from {
+        opacity: 1;
+        color: black;
+    }
+    to {
+        opacity: 0.5;
+        color: blue;
+    }
+}
+@keyframes ng-move-repeat-animation {
+    from {
+        opacity: 1;
+        color: black;
+    }
+    to {
+        opacity: 0.5;
+        color: blue;
+    }
+}
+
+/* ngRepeat ng-leave animation */
+.repeatItem.ng-leave {
+    -webkit-animation: 1s ng-leave-repeat-animation;
+    animation: 1s ng-leave-repeat-animation;
+}
+@-webkit-keyframes ng-leave-repeat-animation {
+    from {
+        opacity: 1;
+        color: black;
+    }
+    to {
+        opacity: 0;
+        color: red;
+    }
+}
+@keyframes ng-leave-repeat-animation {
+    from {
+        opacity: 1;
+        color: black;
+    }
+    to {
+        opacity: 0;
+        color: red;
+    }
+}
+
+/* ngclass animation */
+/*This is the initialClass, that keeps in the element*/
+.initialClass {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+/* This is the animationClass, that is added or removed by the ngClass
+expression*/
+.animationClass {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+.initialClass.animationClass-add{
+    -webkit-animation: 1s ng-class-animation;
+    animation: 1s ng-class-animation;
+}
+.initialClass.animationClass-remove {
+    -webkit-animation: 1s ng-class-animation reverse;
+    animation: 1s ng-class-animation reverse;
+}
+@-webkit-keyframes ng-class-animation {
+    from {
+        background-color: white;
+        color:black;
+        border: 1px solid black;
+    }
+    to {
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+    }
+}
+@keyframes ng-class-animation {
+    from {
+        background-color: white;
+        color:black;
+        border: 1px solid black;
+    }
+    to {
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+/*ngMassage and ngMassages animation*/
+.ngMessagesClass {
+    height: 50px;
+    width: 350px;
+}
+.ngMessagesClass.ng-active-add {
+    transition: 0.3s linear all;
+    background-color: red;
+}
+.ngMessagesClass.ng-active {
+    background-color: red;
+}
+.ngMessagesClass.ng-inactive-add {
+    transition: 0.3s linear all;
+    background-color: white;
+}
+.ngMessagesClass.ng-inactive {
+    background-color: white;
+}
+.ngMessageClass {
+    color: white;
+}
+.ngMessageClass.ng-enter {
+    transition: 0.3s linear all;
+    color: transparent;
+}
+.ngMessageClass.ng-enter-active {
+    color: white;
+}
+.ngMessageClass.ng-leave {
+    transition: 0.3s linear all;
+    color: white;
+}
+.ngMessageClass.ng-leave-active {
+    color: transparent;
+}
+
+
+
+
+/* ngSwitch animation */
+.switchItemRelative {
+    position: relative;
+    height: 25px;
+    overflow: hidden;
+}
+.switchItem {
+    position: absolute;
+    width: 500px;
+    display: block;
+}
+/*The transition is added when the switch item is about to
+enter or about to leave DOM*/
+.switchItem.ng-enter,
+.switchItem.ng-leave {
+    -webkit-transition: 300ms linear all;
+    -moz-transition: 300ms linear all;
+    -ms-transition: 300ms linear all;
+    -o-transition: 300ms linear all;
+    transition: 300ms linear all;
+}
+/* When the element is about to enter DOM*/
+.switchItem.ng-enter {
+    bottom: 100%;
+}
+/* When the element completes the enter transition */
+.switchItem.ng-enter-active {
+    bottom: 0;
+}
+/* When the element is about to leave DOM*/
+.switchItem.ng-leave {
+    bottom: 0;
+}
+/*When the element end the leave transition*/
+.switchItem.ng-leave-active {
+    bottom: -100%;
+}
+
+/*ngInclude*/
+.ngIncludeRelative {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+.ngIncludeItem {
+    position: absolute;
+    width: 500px;
+    display: block;
+}
+.ngIncludeItem.ng-enter,
+.ngIncludeItem.ng-leave {
+    -webkit-transition: 300ms linear all;
+    transition: 300ms linear all;
+}
+.ngIncludeItem.ng-enter {
+    top: 100%;
+}
+.ngIncludeItem.ng-enter-active {
+    top: 0;
+}
+.ngIncludeItem.ng-leave {
+    top: 0;
+}
+.ngIncludeItem.ng-leave-active {
+    top: -100%;
+}
+
+/**
+* end animation
+**/
+
+/*tambahan untuk aplikasi*/
+
+.firstSampleAnimation{
+    padding: 10px;
+}

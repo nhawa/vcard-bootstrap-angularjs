@@ -1,0 +1,120 @@
+body{
+    background-image: url("../image/footer_lodyas.png");
+    color: #d5d5d5;
+    overflow: scroll;
+}
+/*container*/
+.container{
+    position: relative;
+    margin: 30px auto 20px;
+}
+@media (min-width: 992px) {
+    .container {
+        width: 860px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 860px;
+    }
+}
+/*end container*/
+
+/*top*/
+.top{
+
+}
+@media (max-width: 767px) {
+    .top{
+        margin-bottom: 60px;
+        margin-left:30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .top{
+        margin-left:200px;
+    }
+}
+
+/*end top*/
+
+/*content*/
+.content{
+    background-color: rgba(171,183,183,0.2);
+    background-repeat: repeat-y; /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, right top, left top, from(rgba(171,183,183,0.2)), to(rgba(93,93,93,0.3))); /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(right, rgba(93,93,93,0.3)5%, rgba(171,183,183,0.2) 95%); /* Firefox 3.6+ */
+    background: -moz-linear-gradient(right, rgba(93,93,93,0.3)5%, rgba(171,183,183,0.2) 95%); /* IE 10 */
+    background: -ms-linear-gradient(right, rgba(93,93,93,0.3)5%, rgba(171,183,183,0.2) 95%); /* Opera 11.10+ */
+    background: -o-linear-gradient(right, rgba(93,93,93,0.3)5%, rgba(171,183,183,0.2) 95%);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.content img{
+    width: 150px;
+    height: 150px;
+    border: 2px solid #bfbfbf;
+    margin: -50px 6px 10px;
+    position: relative;
+}
+.content:after{
+    clear:both;
+    content:' ';
+    display:block;
+}
+.nav-Stacked{
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.btnn{
+    background-image: url("../image/footer_lodyas.png");
+    border-color: #343434;
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-duration: 200ms;
+    color: #BDC3C7;
+}
+.btnn:hover{
+    /*transform: scale(1.05,1);*/
+    transform: translateX(4px) scale(1.05,1);
+    /*margin-top: 4px;*/
+    /*margin-bottom: 4px;*/
+    color: #ffffff;
+}
+a.active,
+.btnn:focus,
+.btnn:active:focus,
+.btnn.active:focus,
+.btnn.focus,
+.btnn:active.focus,
+.btnn:active,
+.btnn.active.focus {
+    outline: none;
+    /*outline: 5px auto -webkit-focus-ring-color;*/
+    /*outline-offset: -2px;*/
+    background-image: url("../image/footer_lodyas3.png");
+    background-color: #111111;
+    color:#222222;
+}
+.progress-bar{
+    background-color: #919191;
+}
+.bio{
+    border-left: 2px solid rgba(145,145,145,0.5);
+}
+blockquote{
+    border-left: 3px solid rgba(145,145,145,0.5);
+}
+h2{
+    border-bottom: 2px solid #222222;
+}
+h4{
+    border-bottom: 1px solid rgba(145,145,145,0.5);
+}
+
+
+/*end content*/
+
+/*animation*/

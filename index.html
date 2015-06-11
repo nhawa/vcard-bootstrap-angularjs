@@ -1,0 +1,40 @@
+<html>
+<head>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="vendor/bootstrap-3.3.4-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="vendor/font-awesome-4.2.0/css/font-awesome.min.css"/>
+    <!--app css-->
+    <link rel="stylesheet" href="app/vcard.css"/>
+</head>
+<body ng-app="app">
+
+    <div class="container">
+        <div class="top col-sm-offset-3">
+            <h1>John Doe</h1>
+            <h6>Graphic & Web Designer</h6>
+        </div>
+        <div class="content">
+            <div class="col-sm-3">
+
+                <img class="col-sm- 8" src="image/face.jpg" alt="face"/>
+                <ul class=" ngViewRelative nav nav-pills nav-stacked col-lg-12 col-sm-12 col-md-12">
+                    <li><a class="btnn" href="#/Profile" ><span class="fa fa-newspaper-o"></span> Profile</a></li>
+                    <li><a class="btnn" href="#/Resume"><span class="fa fa-area-chart"></span> Resume</a></li>
+                    <li><a class="btnn" href="#/Portfolio"><span class="fa fa-briefcase"></span> Portfolio</a></li>
+                    <li><a class="btnn" href="#/Contact"><span class="fa fa-envelope"></span> Contact</a></li>
+                </ul>
+            </div>
+            <div ng-view class="viewJsAnimation col-sm-9 "> </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+    <script src="vendor/jquery/jquery-1.11.2.min.js"></script>
+    <!--angular js-->
+    <script src="vendor/angularjs/angular-1.3.15.min.js"></script>
+    <script src="vendor/angularjs/angular-route.min.js"></script>
+    <script src="vendor/angularjs/angular-animate.min.js"></script>
+    <script src="app/vcard.js"></script>
+</body>
+</html>
